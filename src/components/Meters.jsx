@@ -16,7 +16,7 @@ export function Meters() {
     }, [])
     return (
         <div>
-            <div className="card bg-green-600 p-5 text-xl text-white font-bold mb-5">WEB BILLER</div>
+            <div className="card bg-primary p-5 text-xl text-white font-bold mb-5">WEB BILLER</div>
             <div className="card--logs text-sm">
                 {/* card one starts */}
                 {loading ?

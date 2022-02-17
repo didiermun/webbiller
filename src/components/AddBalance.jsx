@@ -33,12 +33,12 @@ export function AddBalance() {
 
     }
 
-    return <div className="text-black ">
-        <div className="card bg-green-600 p-5 text-xl text-white font-bold mb-5">WEB BILLER CONTROLL | METER BALANCE</div>
+    return <div className="text-text-primary">
+        <div className="card bg-primary p-5 text-xl text-white font-bold mb-5">WEB BILLER CONTROLL | METER BALANCE</div>
         <div className="lg:flex p-5">
             <div className="bg-white lg:w-1/2 p-5 flex items-center text-sm text-gray-400">
                 <div className="m-auto">
-                    <div className="title text-black font-bold text-xl">WEB BILLER</div>
+                    <div className="title text-primary font-bold text-xl">WEB BILLER</div>
                     <img src={cards} alt="" />
                 </div>
 
@@ -60,7 +60,7 @@ export function AddBalance() {
                             <input type="text" onChange={handleAmount} value={amount} id="amount" className="form-control p-4 w-full border" required />
                         </label>
                     </div>
-                    <button type="submit" className="btn bg-black p-3 rounded text-white w-full" id="buy">Buy</button>
+                    <button type="submit" className="btn bg-primary p-3 rounded text-white w-full" id="buy">Buy</button>
                 </form>
                 <div class="h-20">
                     

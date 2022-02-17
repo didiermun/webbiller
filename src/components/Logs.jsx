@@ -21,7 +21,7 @@ export function Logs() {
     }, [])
     return (
         <div className="transition duration-500 ease-in-out">
-            <div className="card bg-green-600 p-5 text-xl text-white font-bold mb-5">WEB BILLER || ALL TRANSACTIONS</div>
+            <div className="card bg-primary p-5 text-xl text-white font-bold mb-5">WEB BILLER || ALL TRANSACTIONS</div>
             <div className="card--logs text-sm">
                 {loading ?
                     <>

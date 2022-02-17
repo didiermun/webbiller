@@ -25,7 +25,7 @@ export function RegisterMeter() {
         }
     }
     return <div className="text-black ">
-        <div className="card bg-green-600 p-5 text-xl text-white font-bold mb-5">WEB BILLER | REGISTER METERE</div>
+        <div className="card bg-primary p-5 text-xl text-white font-bold mb-5">WEB BILLER | REGISTER METER</div>
         <div className="lg:flex p-5">
             <div className="bg-white lg:w-1/2 p-5 flex items-center text-sm text-gray-400">
                 <div className="m-auto">
@@ -56,7 +56,7 @@ export function RegisterMeter() {
                         </label>
                     </div>
 
-                    <button type="submit" className="btn bg-black p-3 rounded text-white w-full">Register</button>
+                    <button type="submit" className="btn bg-primary p-3 rounded text-white w-full">Register</button>
                 </form>
             </div>
         </div>
