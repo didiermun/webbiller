@@ -2277,6 +2277,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
 }
+.text-primary {
+  color: #03045E;
+}
 
 .bg-green-400 {
   --tw-bg-opacity: 1;
@@ -2291,6 +2294,11 @@ video {
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: #03045E;
 }
 
 .bg-green-700 {

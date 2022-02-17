@@ -29,7 +29,7 @@ export function CheckBalance() {
     }
 
     return <div className="text-black ">
-        <div className="card bg-green-600 p-5 text-xl text-white font-bold mb-5">WEB BILLER CONTROLL | METER ACTIONS</div>
+        <div className="card bg-primary p-5 text-xl text-white font-bold mb-5">WEB BILLER CONTROLL | METER ACTIONS</div>
         <div className="lg:flex p-5">
             <div className="bg-white lg:w-1/2 p-5 flex items-center text-sm text-gray-400">
                 <div className="m-auto">
@@ -49,7 +49,7 @@ export function CheckBalance() {
                             <input type="text" onChange={handleUUID} value={uuid} id="" className="form-control p-4 w-full border" required />
                         </label>
                     </div>
-                    <button type="submit" className="btn bg-black p-3 rounded text-white w-full">Check balance</button>
+                    <button type="submit" className="btn bg-primary p-3 rounded text-white w-full">Check balance</button>
                 </form>
                 <div class="h-40">
                     
