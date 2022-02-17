@@ -74,7 +74,7 @@ export function Logs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
                                             :
-                                            <> {item.transactions[0]?.uuid} </>}
+                                            <> {item.transactions[0]?.id} </>}
                                     </div>
                                     <div className="lg:w-1/5 mb-2 card--balance">
                                         <div className="title font-bold mb-3">METER</div>
@@ -82,7 +82,7 @@ export function Logs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> SAMSUNG </>}
+                                            <> { item.meterNumber} </>}
                                     </div>
                                     <div className="lg:w-1/5 mb-2">
                                         <div className="title font-bold mb-3">AMOUNT</div>
@@ -90,7 +90,7 @@ export function Logs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> Herman Happy </>}
+                                            <>{item.amount} </>}
                                     </div>
 
                                     <div className="lg:w-1/5 mb-2">
@@ -99,7 +99,7 @@ export function Logs() {
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> 1.9441° S, 30.0619° E </>}
+                                            <>{item?.amount/100+' days'}   </>}
                                     </div>
                                     <div className="lg:w-1/5 mb-2">
                                         <div className="title font-bold mb-3">DONE AT</div>

@@ -14,7 +14,7 @@ export function RegisterMeter() {
         e.preventDefault();
         try {
             let data = await addCard({
-                owner: owner,
+                meter_owner: owner,
             })
             if (data) {
                 setOwner('')

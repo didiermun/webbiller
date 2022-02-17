@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import socketIOClient from "socket.io-client"
 import Skeleton from "react-loading-skeleton";
 import url from '../utils/url';
-import { icons } from '../utils/icons';
 
-export function ReadCards() {
+export function Meters() {
     const [cards, setCards] = useState([])
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -24,26 +23,19 @@ export function ReadCards() {
                     <>
 
                         <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
-                            <div className="lg:w-1/3 mb-2 card--code">
+                            <div className="lg:w-1/2 mb-2 card--code">
                                 <div className="title font-bold mb-3">METER NUMBER</div>
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
 
 
                             </div>
-                            <div className="lg:w-1/3 mb-2 card--balance">
+                            <div className="lg:w-1/2 mb-2 card--balance">
                                 <div className="title font-bold mb-3">OWNER</div>
 
 
                                 <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
 
-
-                            </div>
-                            <div className="lg:w-1/3 mb-2">
-                                <div className="title font-bold mb-3">METER DURATION</div>
-
-
-                                <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
 
                             </div>
 
@@ -54,33 +46,23 @@ export function ReadCards() {
                         {cards?.slice().reverse().map((item) => {
                             return (
                                 <div className="bg-white rounded shadow-lg text-black p-5 my-4 lg:flex gap-5 w-full">
-                                    <div className="lg:w-1/3 mb-2 card--code">
+                                    <div className="lg:w-1/2 mb-2 card--code">
                                         <div className="title font-bold mb-3">METER NUMBER</div>
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 9) * 9) + "%"} />
                                             :
-                                            <> {item.uuid} </>
+                                            <> {item.meterNumber} </>
                                         }
                                     </div>
-                                    <div className="lg:w-1/3 mb-2 card--balance">
+                                    <div className="lg:w-1/2 mb-2 card--balance">
                                         <div className="title font-bold mb-3">METER OWNER</div>
 
                                         {loading ?
                                             <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
                                             :
-                                            <> ------ </>
+                                            <> {item.owner} </>
                                         }
                                     </div>
-                                    <div className="lg:w-1/3 mb-2">
-                                        <div className="title font-bold mb-3">METER DURATION</div>
-
-                                        {loading ?
-                                            <Skeleton height={25} width={Math.ceil((Math.random() + 10) * 9) + "%"} />
-                                            :
-                                            <> {item.current_balance} </>
-                                        }
-                                    </div>
-
                                 </div>
                             );
                         })}

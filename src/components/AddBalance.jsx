@@ -20,15 +20,15 @@ export function AddBalance() {
         e.preventDefault();
 
         await AddTransation({
-            number,amount
+            number,meterNumber:amount
         })
             .then(() => {
-                // history.push("/balance/logs")
+                history.push("/balance/logs")
                 alert("It was a success")
             })
             .catch((error) => {
-                // console.log(error.response.data.message)
-                // setError(error.response.data.message)
+                console.log(error.response.data.message)
+                setError(error.response.data.message)
             })
 
     }
@@ -51,16 +51,16 @@ export function AddBalance() {
                     <div className="form-group my-5">
                         <label htmlFor="">
                             <span className="block float-left my-3">METER NUMBER</span>
-                            <input type="text" onChange={handleNumber} value={number} id="" className="form-control p-4 w-full border" required />
+                            <input type="text" onChange={handleNumber} value={number} id="number" className="form-control p-4 w-full border" required />
                         </label>
                     </div>
                     <div className="form-group my-5">
                         <label htmlFor="">
                             <span className="block float-left my-3">METER AMOUNT</span>
-                            <input type="text" onChange={handleAmount} value={amount} id="" className="form-control p-4 w-full border" required />
+                            <input type="text" onChange={handleAmount} value={amount} id="amount" className="form-control p-4 w-full border" required />
                         </label>
                     </div>
-                    <button type="submit" className="btn bg-black p-3 rounded text-white w-full">Buy</button>
+                    <button type="submit" className="btn bg-black p-3 rounded text-white w-full" id="buy">Buy</button>
                 </form>
                 <div class="h-20">
                     

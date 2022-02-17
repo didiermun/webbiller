@@ -3,7 +3,7 @@ import './App.css';
 import './style/main.css'
 import { Dashboard } from './pages/Dashboard';
 import {Route,Switch} from 'react-router-dom'
-import { ReadCards } from './components/ReadCard';
+import { Meters } from './components/Meters';
 import { RegisterMeter } from './components/RegisterMeter';
 import { CheckBalance } from './components/CheckBalance';
 import { AddBalance } from './components/AddBalance';
@@ -18,7 +18,7 @@ function App() {
      <Dashboard>
        <Switch>
          <Route exact path="/view/meters">
-        <ReadCards/>
+        <Meters/>
        </Route>
        <Route exact path="/">
        <Logs/>
